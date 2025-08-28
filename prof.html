@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaMind</title>
+	<link rel="stylesheet" type="text/css" href="styleprof.css">
+	<link rel="shortcut icon" href="Educa.png.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+   <header class="header">
+		<div class="logo">
+			<img src="Educa.png.png">
+		</div>
+
+		<nav>
+			<ul class="nav-links">
+				<li><a href="index.html">QUEM SOMOS</a></li>
+				<li><a href="banco.html">SALAS</a></li>
+				<li><a href="fotos.html">CHAT DE IA</a></li>
+				<li><a href="prof.html">PAIS E PROFESSORES</a></li>
+			</ul>
+		</nav>
+
+		<a class="btn" href="#"><button>Entrar</button></a>
+	</header>
+
+    <!-- Hero Section -->
+    <section class="wine-bg text-white py-16 px-6">
+        <div class="container mx-auto">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Acompanhamento de Desempenho</h2>
+                <p class="text-xl opacity-90 mb-8">Visualize o progresso dos alunos e incentive a excelência acadêmica</p>
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <div class="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+                        <i class="fas fa-trophy text-3xl text-gold mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Ranking Interativo</h3>
+                        <p>Compare desempenhos e celebre conquistas</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+                        <i class="fas fa-chart-line text-3xl text-gold mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Métricas Detalhadas</h3>
+                        <p>Análise completa do progresso estudantil</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+                        <i class="fas fa-users text-3xl text-gold mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Para Pais & Professores</h3>
+                        <p>Acompanhamento transparente do aprendizado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold wine-text mb-4">Visão Geral do Desempenho</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Métricas e estatísticas da turma</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
+                <div class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200">
+                    <div class="w-16 h-16 wine-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-graduate text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold wine-text">28</h3>
+                    <p class="text-gray-600">Alunos</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200">
+                    <div class="w-16 h-16 wine-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-pie text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold wine-text">87%</h3>
+                    <p class="text-gray-600">Média da Turma</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200">
+                    <div class="w-16 h-16 wine-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-trophy text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold wine-text">92%</h3>
+                    <p class="text-gray-600">Melhor Aluno</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200">
+                    <div class="w-16 h-16 wine-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-arrow-up text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold wine-text">12%</h3>
+                    <p class="text-gray-600">Crescimento Mensal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ranking Section -->
+    <section id="ranking" class="py-16 px-6 wine-bg">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ranking de Desempenho</h2>
+                <p class="text-white opacity-90">Classificação dos alunos por pontuação geral</p>
+            </div>
+
+            <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="p-6 border-b border-gray-200">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <h3 class="text-xl font-bold wine-text mb-4 md:mb-0">Turma 8º Ano - Matemática</h3>
+                        <div class="flex space-x-4">
+                            <select class="border border-gray-300 rounded-lg px-4 py-2 wine-text">
+                                <option>Todas as Matérias</option>
+                                <option>Matemática</option>
+                                <option>Português</option>
+                                <option>Ciências</option>
+                            </select>
+                            <button class="wine-bg text-white px-4 py-2 rounded-lg">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full ranking-table">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium wine-text uppercase tracking-wider">Posição</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium wine-text uppercase tracking-wider">Aluno</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium wine-text uppercase tracking-wider">Pontuação</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium wine-text uppercase tracking-wider">Matemática</th>
+                                <th class="px-6-py-3 text-left text-xs font-medium wine-text uppercase tracking-wider">Português</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium wine-text uppercase tracking-wider">Progresso</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="w-8 h-8 medal-gold rounded-full flex items-center justify-center">
+                                        <span class="text-white font-bold">1</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 wine-bg rounded-full flex items-center justify-center mr-3">
+                                            <span class="text-white font-semibold">AS</span>
+                                        </div>
+                                        <div>
+                                            <div class="font-medium wine-text">Ana Silva</div>
+                                            <div class="text-sm text-gray-500">8º Ano A</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">92%</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">94%</td>
+                                <td class="px-6 py-4 whitespace-nowrap">90%</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-green-500 h-2 rounded-full" style="width: 92%"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="w-8 h-8 medal-silver rounded-full flex items-center justify-center">
+                                        <span class="text-white font-bold">2</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 wine-bg rounded-full flex items-center justify-center mr-3">
+                                            <span class="text-white font-semibold">BC</span>
+                                        </div>
+                                        <div>
+                                            <div class="font-medium wine-text">Bruno Costa</div>
+                                            <div class="text-sm text-gray-500">8º Ano A</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">88%</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">86%</td>
+                                <td class="px-6 py-4 whitespace-nowrap">90%</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-500 h-2 rounded-full" style="width: 88%"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="w-8 h-8 medal-bronze rounded-full flex items-center justify-center">
+                                        <span class="text-white font-bold">3</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 wine-bg rounded-full flex items-center justify-center mr-3">
+                                            <span class="text-white font-semibold">CS</span>
+                                        </div>
+                                        <div>
+                                            <div class="font-medium wine-text">Carla Santos</div>
+                                            <div class="text-sm text-gray-500">8º Ano B</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">85%</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">82%</td>
+                                <td class="px-6 py-4 whitespace-nowrap">88%</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-yellow-500 h-2 rounded-full" style="width: 85%"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- Mais alunos -->
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                                        <span class="text-gray-600 font-bold">4</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 wine-bg rounded-full flex items-center justify-center mr-3">
+                                            <span class="text-white font-semibold">DP</span>
+                                        </div>
+                                        <div>
+                                            <div class="font-medium wine-text">Daniel Pereira</div>
+                                            <div class="text-sm text-gray-500">8º Ano A</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-3 py-1 bg-grayIt-100 text-gray-800 rounded-full text-sm font-medium">82%</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">85%</td>
+                                <td class="px-6 py-4 whitespace-nowrap">79%</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-gray-500 h-2 rounded-full" style="width: 82%"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Details -->
+    <section id="desempenho" class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold wine-text mb-4">Análise Detalhada</h2>
+                <p class="text-gray-600">Estatísticas e métricas de desempenho individual</p>
+            </div>
+
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold wine-text mb-4">Distribuição de Notas</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>90-100%</span>
+                                <span class="wine-text font-semibold">8 alunos</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="wine-bg h-3 rounded-full" style="width: 28%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>80-89%</span>
+                                <span class="wine-text font-semibold">12 alunos</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="wine-bg h-3 rounded-full" style="width: 43%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>70-79%</span>
+                                <span class="wine-text font-semibold">6 alunos</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="wine-bg h-3 rounded-full" style="width: 21%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold wine-text mb-4">Desempenho por Matéria</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Matemática</span>
+                                <span class="wine-text font-semibold">84%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-blue-500 h-3 rounded-full" style="width: 84%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Português</span>
+                                <span class="wine-text font-semibold">79%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-green-500 h-3 rounded-full" style="width: 79%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Ciências</span>
+                                <span class="wine-text font-semibold">82%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-purple-500 h-3 rounded-full" style="width: 82%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="wine-dark text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">EducaMind</h3>
+                    <p class="opacity-80">Plataforma de acompanhamento educacional para pais e professores</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Acesso</h4>
+                    <ul class="space-y-2 opacity-80">
+                        <li><a href="#dashboard" class="hover:underline">Dashboard</a></li>
+                        <li><a href="#ranking" class="hover:underline">Ranking</a></li>
+                        <li><a href="#desempenho" class="hover:underline">Desempenho</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Suporte</h4>
+                    <ul class="space-y-2 opacity-80">
+                        <li><a href="#" class="hover:underline">Pais</a></li>
+                        <li><a href="#" class="hover:underline">Professores</a></li>
+                        <li><a href="#" class="hover:underline">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contato</h4>
+                    <p class="opacity-80">contato@educamind.com</p>
+                    <p class="opacity-80">+55 (11) 99999-9999</p>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 mt-8 pt-8 text-center opacity-80">
+                <p>&copy; 2024 EducaMind. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animação simples para as barras de progresso
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+
+            // Scroll suave
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

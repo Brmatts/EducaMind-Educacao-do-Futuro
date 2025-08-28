@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaMind</title>
+	<link rel="stylesheet" href="stylefotos.css">
+	<link rel="shortcut icon" href="Educa.png.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --wine-primary: #722f37;
+            --wine-secondary: #8d3b46;
+            --wine-light: #b57d84;
+            --wine-dark: #5a2329;
+            --cream: #f8f4f0;
+            --gold: #d4af37;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--cream) 0%, #ffffff 100%);
+        }
+        
+        .wine-bg {
+            background: linear-gradient(135deg, var(--wine-primary) 0%, var(--wine-dark) 100%);
+        }
+        
+        .wine-text {
+            color: var(--wine-primary);
+        }
+        
+        .gold-text {
+            color: var(--gold);
+        }
+        
+        .chat-container {
+            height: 500px;
+            scroll-behavior: smooth;
+        }
+        
+        .ai-message {
+            background: linear-gradient(135deg, var(--wine-light) 0%, var(--wine-secondary) 100%);
+        }
+        
+        .user-message {
+            background: linear-gradient(135deg, var(--wine-primary) 0%, var(--wine-dark) 100%);
+        }
+        
+        .typing-animation {
+            display: inline-block;
+        }
+        
+        .typing-animation span {
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 2px;
+            animation: typing 1.4s infinite ease-in-out both;
+        }
+        
+        .typing-animation span:nth-child(1) { animation-delay: 0s; }
+        .typing-animation span:nth-child(2) { animation-delay: 0.2s; }
+        .typing-animation span:nth-child(3) { animation-delay: 0.4s; }
+        
+        @keyframes typing {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+     <header class="header">
+		<div class="logo">
+			<img src="Educa.png.png">
+		</div>
+
+		<nav>
+			<ul class="nav-links">
+				<li><a href="index.html">QUEM SOMOS</a></li>
+				<li><a href="banco.html">SALAS</a></li>
+				<li><a href="fotos.html">CHAT DE IA</a></li>
+				<li><a href="prof.html">PAIS E PROFESSORES</a></li>
+			</ul>
+		</nav>
+
+		<a class="btn" href="#"><button>Entrar</button></a>
+	</header>
+
+    <!-- Hero Section -->
+    <section class="wine-bg text-white py-20 px-6">
+        <div class="container mx-auto">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">IA Educacional Inteligente</h2>
+                <p class="text-xl opacity-90 mb-8">Tire suas dúvidas 24/7 com nossa inteligência artificial especializada em educação</p>
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <div class="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+                        <i class="fas fa-brain text-3xl text-gold mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">IA Especializada</h3>
+                        <p>Respostas inteligentes para dúvidas educacionais</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+                        <i class="fas fa-clock text-3xl text-gold mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">24 Horas</h3>
+                        <p>Disponível sempre que você precisar</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+                        <i class="fas fa-graduation-cap text-3xl text-gold mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Multidisciplinar</h3>
+                        <p>Matemática, Português, Ciências e mais</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IA Educacional Section -->
+    <section id="ia-educacional" class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold wine-text mb-4">Chat com IA Educacional</h2>
+                <p class="text-gray-600">Converse com nossa inteligência artificial e tire suas dúvidas instantaneamente</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+                <!-- Chat Header -->
+                <div class="wine-bg text-white p-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-robot text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">EduBot - IA Educacional</h3>
+                            <p class="opacity-90">Especialista em Matemática, Português e Ciências</p>
+                            <div class="flex items-center mt-2">
+                                <div class="w-3 h-3 bg-green-400 rounded-full mr-2"></div>
+                                <span class="text-sm">Online</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Messages -->
+                <div id="chat-messages" class="chat-container overflow-y-auto p-6 space-y-4 bg-gray-50">
+                    <!-- Mensagem de boas-vindas -->
+                    <div class="flex space-x-3">
+                        <div class="w-10 h-10 wine-bg rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-robot text-white"></i>
+                        </div>
+                        <div class="ai-message text-white rounded-2xl px-4 py-3 max-w-xs md:max-w-md">
+                            <p>Olá! Sou o EduBot, sua IA educacional. Estou aqui para ajudar com dúvidas de matemática, português, ciências e outras matérias. Como posso ajudar você hoje? 🎓</p>
+                            <span class="text-xs opacity-70">10:00</span>
+                        </div>
+                    </div>
+
+                    <!-- Exemplos de perguntas -->
+                    <div class="flex space-x-3">
+                        <div class="w-10 h-10 wine-bg rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-robot text-white"></i>
+                        </div>
+                        <div class="ai-message text-white rounded-2xl px-4 py-3 max-w-xs md:max-w-md">
+                            <p class="font-semibold mb-2">Experimente perguntar:</p>
+                            <div class="space-y-2 text-sm">
+                                <p>• "Como resolver equações de segundo grau?"</p>
+                                <p>• "O que é sujeito e predicado?"</p>
+                                <p>• "Explique fotossíntese"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Input -->
+                <div class="p-4 border-t border-gray-200 bg-white">
+                    <form id="chat-form" class="flex space-x-3">
+                        <input 
+                            id="chat-input" 
+                            type="text" 
+                            placeholder="Digite sua dúvida educacional..." 
+                            class="flex-1 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-wine-primary"
+                            required
+                        >
+                        <button 
+                            type="submit" 
+                            class="wine-bg text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center"
+                        >
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Enviar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section id="como-usar" class="py-16 px-6 wine-bg text-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Como Usar a IA Educacional</h2>
+                <p class="opacity-90">Aprenda a aproveitar ao máximo nossa inteligência artificial</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Faça sua Pergunta</h3>
+                    <p class="opacity-90">Digite sua dúvida de forma clara e específica no chat</p>
+                </div>
+
+                <div class="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Receba Respostas</h3>
+                    <p class="opacity-90">Nossa IA analisa e fornece explicações detalhadas</p>
+                </div>
+
+                <div class="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Aprenda Mais</h3>
+                    <p class="opacity-90">Continue perguntando para aprofundar seu conhecimento</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold wine-text mb-4">Matérias Disponíveis</h2>
+                <p class="text-gray-600">Nossa IA está preparada para ajudar em diversas disciplinas</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div class="text-center p-6 bg-gray-50 rounded-xl border border-gray-200">
+                    <div class="w-16 h-16 wine-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-calculator text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold wine-text mb-2">Matemática</h3>
+                    <p class="text-gray-700">Álgebra, Geometria, Cálculo</p>
+                </div>
+
+                <div class="text-center p-6 bg-gray-50 rounded-xl border border-gray-200">
+                    <div class="w-16 h-16 wine-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-book text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold wine-text mb-2">Português</h3>
+                    <p class="text-gray-700">Gramática, Literatura, Redação</p>
+                </div>
+
+                <div class="text-center p-6 bg-gray-50 rounded-xl border border-gray-200">
+                    <div class="w-16 h-16 wine-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-flask text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold wine-text mb-2">Ciências</h3>
+                    <p class="text-gray-700">Física, Química, Biologia</p>
+                </div>
+
+                <div class="text-center p-6 bg-gray-50 rounded-xl border border-gray-200">
+                    <div class="w-16 h-16 wine-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-globe text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold wine-text mb-2">História</h3>
+                    <p class="text-gray-700">Brasil, Mundial, Geografia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="wine-dark text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">EducaMind</h3>
+                    <p class="opacity-80">Revolucionando a educação através da inteligência artificial</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Recursos</h4>
+                    <ul class="space-y-2 opacity-80">
+                        <li><a href="#ia-educacional" class="hover:underline">IA Educacional</a></li>
+                        <li><a href="#como-usar" class="hover:underline">Como Usar</a></li>
+                        <li><a href="#" class="hover:underline">Matérias</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Suporte</h4>
+                    <ul class="space-y-2 opacity-80">
+                        <li><a href="#" class="hover:underline">Ajuda</a></li>
+                        <li><a href="#" class="hover:underline">Contato</a></li>
+                        <li><a href="#" class="hover:underline">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contato</h4>
+                    <p class="opacity-80">contato@educamind.com</p>
+                    <p class="opacity-80">+55 (11) 99999-9999</p>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 mt-8 pt-8 text-center opacity-80">
+                <p>&copy; 2024 EducaMind. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Base de conhecimento da IA Educacional
+        const knowledgeBase = {
+            'matemática': [
+                {
+                    patterns: [/equaç[aã]o.*segundo.*grau/, /bhaskara/, /x²/],
+                    response: "Para resolver equações de segundo grau (ax² + bx + c = 0), use a fórmula de Bhaskara: x = [-b ± √(b² - 4ac)] / 2a. Primeiro calcule o discriminante (Δ = b² - 4ac). Se Δ > 0, há duas raízes reais; se Δ = 0, uma raiz real; se Δ < 0, raízes complexas."
+                },
+                {
+                    patterns: [/teorema.*pitagoras/, /tri[aâ]ngulo.*ret[aâ]ngulo/],
+                    response: "O Teorema de Pitágoras diz que num triângulo retângulo: a² = b² + c², onde 'a' é a hipotenusa e 'b' e 'c' são os catetos. É útil para calcular lados desconhecidos em triângulos retângulos."
+                }
+            ],
+            'português': [
+                {
+                    patterns: [/sujeito.*predicado/, /an[aá]lise.*sint[aá]tica/],
+                    response: "Sujeito é quem pratica ou sofre a ação verbal. Predicado é tudo que se diz sobre o sujeito, contendo o verbo. Ex: 'O aluno (sujeito) estuda matemática (predicado)'."
+                },
+                {
+                    patterns: [/figuras.*linguagem/, /met[aá]fora/, /comparação/],
+                    response: "Figuras de linguagem são recursos expressivos. Metáfora: comparação implícita ('seus olhos são estrelas'). Comparação: uso de 'como' ou 'tal qual' ('frio como gelo')."
+                }
+            ],
+            'ciências': [
+                {
+                    patterns: [/fotoss[ií]ntese/, /plantas/, /clorofila/],
+                    response: "Fotossíntese é o processo onde plantas convertem luz solar, água e CO² em glucose e oxigênio. Ocorre nos cloroplastos, usando clorofila para absorver luz. Equação: 6CO² + 6H²O + luz → C⁶H¹²O⁶ + 6O²"
+                },
+                {
+                    patterns: [/célula/, /mitoc[ôo]ndria/, /n[uú]cleo/],
+                    response: "A célula é a unidade básica da vida. Mitocôndria: produz energia (ATP). Núcleo: contém DNA e controla atividades celulares. Membrana plasmática: controla entrada/saída de substâncias."
+                }
+            ],
+            'história': [
+                {
+                    patterns: [/brasil.*col[ôo]nia/, /descobrimento/],
+                    response: "O Brasil foi descoberto em 1500 por Pedro Álvares Cabral. Período colonial: 1500-1822, com economia baseada em pau-brasil, cana-de-açúcar, mineração e trabalho escravo."
+                }
+            ],
+            'default': [
+                {
+                    patterns: [/ol[aá]/, /oi/, /hello/, /iniciar/],
+                    response: "Olá! Sou o EduBot, sua IA educacional. Estou aqui para ajudar com suas dúvidas escolares. Sobre qual matéria gostaria de aprender hoje? 📚"
+                },
+                {
+                    patterns: [/obrigad[ao]/, /valeu/, /agradeço/],
+                    response: "De nada! Fico feliz em ajudar. Se tiver mais dúvidas, estou aqui! 😊"
+                }
+            ]
+        };
+
+        // Sistema de chat
+        const chatForm = document.getElementById('chat-form');
+        const chatInput = document.getElementById('chat-input');
+        const chatMessages = document.getElementById('chat-messages');
+
+        // Função para encontrar resposta
+        function findResponse(message) {
+            const lowerMessage = message.toLowerCase();
+            
+            // Verifica todas as categorias
+            for (const category in knowledgeBase) {
+                for (const item of knowledgeBase[category]) {
+                    for (const pattern of item.patterns) {
+                        if (pattern.test(lowerMessage)) {
+                            return item.response;
+                        }
+                    }
+                }
+            }
+            
+            // Resposta padrão se não encontrar correspondência
+            return "Ótima pergunta! Para te dar a melhor resposta, você poderia reformular sua dúvida ou ser mais específico? Por exemplo: 'Como resolver equações?' ou 'Explique fotossíntese'. Estou aqui para ajudar! 📖";
+        }
+
+        // Função para adicionar mensagem do usuário
+        function addUserMessage(message) {
+            const now = new Date();
+            const time = now.toLocaleTimeString('pt-BR', { 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            });
+
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'flex space-x-3 justify-end';
+            
+            messageDiv.innerHTML = `
+                <div class="user-message text-white rounded-2xl px-4 py-3 max-w-xs md:max-w-md">
+                    <p>${message}</p>
+                    <span class="text-xs opacity-70">${time}</span>
+                </div>
+                <div class="w-10 h-10 wine-bg rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-user text-white"></i>
+                </div>
+            `;
+
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Função para adicionar mensagem da IA
+        function addAIMessage(message, isTyping = false) {
+            const now = new Date();
+            const time = now.toLocaleTimeString('pt-BR', { 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            });
+
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'flex space-x-3';
+            
+            if (isTyping) {
+                messageDiv.innerHTML = `
+                    <div class="w-10 h-10 wine-bg rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-robot text-white"></i>
+                    </div>
+                    <div class="ai-message text-white rounded-2xl px-4 py-3 max-w-xs md:max-w-md">
+                        <div class="typing-animation">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                `;
+            } else {
+                messageDiv.innerHTML = `
+                    <div class="w-10 h-10 wine-bg rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-robot text-white"></i>
+                    </div>
+                    <div class="ai-message text-white rounded-2xl px-4 py-3 max-w-xs md:max-w-md">
+                        <p>${message}</p>
+                        <span class="text-xs opacity-70">${time}</span>
+                    </div>
+                `;
+            }
+
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            
+            return messageDiv;
+        }
+
+        // Enviar mensagem
+        chatForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const message = chatInput.value.trim();
+            if (!message) return;
+
+            // Adiciona mensagem do usuário
+            addUserMessage(message);
+            chatInput.value = '';
+
+            // Simula digitação da IA
+            const typingMessage = addAIMessage('', true);
+
+            // Resposta após 1-2 segundos
+            setTimeout(() => {
+                const response = findResponse(message);
+                chatMessages.removeChild(typingMessage);
+                addAIMessage(response);
+            }, 1000 + Math.random() * 1000);
+        });
+
+        // Scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Focar no input ao carregar
+        chatInput.focus();
+    </script>
+</body>
+</html>
